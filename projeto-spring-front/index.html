@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Series disponiveis</title>
+
+    <link rel="stylesheet" href="css/master.css">
+</head>
+<body>
+<header>
+    <h1>Sistema de controle</h1>
+    <nav>
+        <ul>
+            <li data-target="#cadSerie">Cadastro de Series</li>
+            <li data-target="#listSerie" data-tipo="listar" data-objeto="serie">Lista de Series</li>
+            <li data-target="#cadTemporada">Cadastro de Temporadas</li>
+            <li data-target="#listTemporada" data-tipo="listar" data-objeto="temporada">Lista de Temporadas</li>
+            <li data-target="#cadEpisodio">Cadastro de Episódios</li>
+            <li data-target="#listEpisodio" data-tipo="listar" data-objeto="episodio">Lista de Episódios</li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section id="cadSerie" class="sessaoCadastro">
+        <h1>Cadastro Série</h1>
+        <form action="#" id="idfrmCadSerie">
+            <label for="idSerie">Id</label>
+            <input type="number" name="nrId" id="idSerie" min="1">
+            <button type="button" id="searchId" class="botaoBusca">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button><br>
+            <label>Nome: <input type="text" name="txtNome" id="nomeSerie" maxlength="100"></label><br>
+            <label>Ano: <input type="number" name="nrAno" id="anoSerie" min="1980" value="2000"></label><br>
+            <label>Descrição: <input type="text" name="txtDescricao" id="descricaoSerie"></label><br>
+            <br>
+            <button id="btnSerieDelete" type="button" class="botaoDeletar">Apagar</button>&nbsp;&nbsp;
+            <button id="btnRegistrar" type="button" class="botaoEnviar">Cadastrar</button>
+            <button id="btnAlterar" type="button" class="botaoEnviar botaoAlterar">Alterar</button>
+        </form>
+    </section>
+    <section id="listSerie">
+        <table>
+            <thead>
+                <th>Id</th>
+                <th>Nome</th>
+            <th>Ano</th>
+            <th>Descricao</th>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+    </section>
+<!-- Temporada -->
+    <section id="cadTemporada" class="sessaoCadastro">
+        <h1>Cadastro Temporada</h1>
+        <form action="#" id="idfrmCadTemporada">
+            <label for="idTemporada">Id</label>
+            <input type="number" name="nrId" id="idTemporada" min="1">
+            <button type="button" id="searchTempordaId" class="botaoBusca">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button><br>
+            <label>Numero: <input type="number" name="nrNumero" id="numeroTemporada" min="1" value=""></label><br>
+            <label>Descrição: <input type="text" name="txtDescricao" id="descricaoTemporada"></label><br>
+            <label for="serieTemporada">Série</label>
+            <select name="selSerie" id="serieTemporada">
+                <option value="">-------------------</option>
+            </select>
+            <br>
+            <button id="btnTemporadaDelete" type="button" class="botaoDeletar">Apagar</button>&nbsp;&nbsp;
+            <button id="btnRegistrarTemporada" type="button" class="botaoEnviar">Cadastrar</button>
+            <button id="btnAlterarTemporada" type="button" class="botaoEnviar botaoAlterar">Alterar</button>
+        </form>
+    </section>
+    <section id="listTemporada">
+        <table>
+            <thead>
+            <th>Id</th>
+            <th>Número</th>
+            <th>Descrição</th>
+            <th>Série</th>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+    </section>
+
+    <!-- Episódio -->
+    <section id="cadEpisodio" class="sessaoCadastro">
+        <h1>Cadastro Episódio</h1>
+        <form action="#" id="idfrmCadEpisodio">
+            <label for="idEpisodio">Id</label>
+            <input type="number" name="nrId" id="idEpisodio" min="1">
+            <button type="button" id="searchEpisodioId" class="botaoBusca">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button><br>
+            <label for="nomeEpisodio">Nome:</label>
+            <input type="text" name="nmEpisodio" id="nomeEpisodio">
+            <label>Numero: <input type="number" name="nrEpisodio" id="numeroEpisodio" min="1" value=""></label><br>
+            <label for="temporadaEpisodio">Temporada</label>
+            <select name="selTemporada" id="temporadaEpisodio">
+                <option value="">-------------------</option>
+            </select>
+            <br>
+            <button id="btnEpisodioDelete" type="button" class="botaoDeletar">Apagar</button>&nbsp;&nbsp;
+            <button id="btnRegistrarEpisodio" type="button" class="botaoEnviar">Cadastrar</button>
+            <button id="btnAlterarEpisodio" type="button" class="botaoEnviar botaoAlterar">Alterar</button>
+        </form>
+    </section>
+    <section id="listEpisodio">
+        <table>
+            <caption>Lista Episódios</caption>
+            <thead>
+            <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Número</th>
+            <th>Temporada</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+    </section>
+
+
+</main>
+<footer>
+    <div id="wait" class="loading">
+        <img src="css/images/demo_wait.gif">
+        <br>Loading...
+    </div>
+    <div id="menssagem" class="loading loadingMessagem">
+        <div></div>
+        <button id="btnMensagem">Fechar</button>
+    </div>
+</footer>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/temporadaScript.js"></script>
+<script src="js/episodioScript.js"></script>
+<script src="js/serieScript.js"></script>
+</body>
+</html>

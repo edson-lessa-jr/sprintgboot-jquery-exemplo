@@ -1,0 +1,151 @@
+main section{
+    position: relative;
+    display: none;
+}
+
+header, header > h1{
+    position: relative;
+    width: 100%;
+    background-color: #1b1bd6;
+}
+
+header > h1 {
+    font-family: "Arial Black";
+    font-size: xx-large;
+    text-align: center;
+    padding-top: 30px;
+    height: 80px;
+    color: white;
+}
+
+nav ul{
+    list-style-type: none;
+    overflow: hidden;
+}
+nav ul li{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 15%;
+    font-weight: bold;
+    font-size: large;
+}
+
+nav ul li:hover{
+    background-color: aqua;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.sessaoCadastro{
+    position: relative;
+    top: 70px;
+    width: 400px;
+    left: calc(50% - 200px);
+    border: 1px solid blue;
+    height: 400px;
+    padding-left: 10px;
+}
+
+input{
+    margin-bottom: 20px;
+    width: 300px;
+    border: 1px solid gray;
+}
+
+button{
+    background-color: blue;
+    width: 100px;
+    color: white;
+    border: 0px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 1px 1px cornflowerblue;
+}
+
+.botaoEnviar{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+}
+.botaoAlterar{
+    display: none;
+}
+.botaoEnviar:hover{
+    background-color: lightcyan;
+    color: black;
+}
+.botaoEnviar:active{
+    background-color: cyan;
+}
+
+.botaoBusca{
+    border-radius: 15px;
+    width: 20px;
+    padding: 2px;
+}
+.botaoDeletar{
+    position: absolute;
+    background-color: red;
+    right: 150px;
+    padding: 10px;
+    bottom: 10px;
+    right: 120px;
+    display: none;
+}
+label{
+    font-weight: bold;
+}
+main section >h1 {
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.loading{
+    display: none;
+    width: 70px;
+    height: 90px;
+    border: 1px solid black;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 2px;
+}
+.loadingMessagem{
+    width: 400px;
+    height: 400px;
+    left: calc(50% - 400px);
+    background-color: greenyellow;
+}
+.loading img{
+    width: 64px;
+    height: 64px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    position: absolute;
+    top: 50px;
+    width: 500px;
+    left: calc(50% - 250px);
+}
+th {
+    font-family: cursive;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 10px;
+}
+tr {
+    padding-top: 15px;
+}
+td {
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: large;
+}
